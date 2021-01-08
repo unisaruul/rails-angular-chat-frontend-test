@@ -1,0 +1,14 @@
+<p>CHAT page!</p>
+<label>Board</label><br/>
+<div id="chatContainer"></div>
+<label>Room:</label>
+<select [(ngModel)]="selectedRoom" (change)="onSelect()">
+  <option *ngFor="let room of rooms" [ngValue]="room.id">
+    {{ room.name }}
+  </option>
+</select>
+<br/>
+<label>message: </label>
+<textarea placeholder="type your ..." [(ngModel)]="chat['room_message']['message']"></textarea><br/>
+<button (click)="submit()">Click me!</button>
+<br/>
