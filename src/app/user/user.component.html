@@ -1,0 +1,6 @@
+<p>user works!</p>
+<form [formGroup]="form" (ngSubmit)="onSave()">
+  <input type="text" id="nickname" formControlName="nickname" />
+  <input type="file" name="avatar_image" formControlName="avatar_image" (change)="onFileSelect($event)" />
+  <button type="submit">Submit</button>
+</form>
